@@ -1,19 +1,20 @@
 package com.skillstorm.beans;
 
-public class Expense {
+import java.io.Serializable;
 
+public class Expense implements Serializable {
 	private int expenseId;
 	private String name;
 	private String reason;
 	private String notes;
-	private ReimburseStatus status;
+	private int status; // alter later
 	
 	
 	public Expense() {
 		super();
 	}
 
-	public Expense(int expenseId, String name, String reason, String notes, ReimburseStatus status) {
+	public Expense(int expenseId, String name, String reason, String notes, int status) {
 		super();
 		this.expenseId = expenseId;
 		this.name = name;
@@ -22,7 +23,7 @@ public class Expense {
 		this.status = status;
 	}
 
-	public Expense(String name, ReimburseStatus status) {
+	public Expense(String name, int status) {
 		super();
 		this.name = name;
 		this.status = status;
@@ -68,12 +69,12 @@ public class Expense {
 	}
 
 
-	public ReimburseStatus getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
 
-	public void setStatus(ReimburseStatus status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -83,8 +84,4 @@ public class Expense {
 		return "Expense [expenseId=" + expenseId + ", name=" + name + ", reason=" + reason + ", notes=" + notes
 				+ ", status=" + status + "]";
 	}
-
-
-	
-
 }

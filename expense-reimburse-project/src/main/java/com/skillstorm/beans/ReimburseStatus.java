@@ -1,7 +1,6 @@
 package com.skillstorm.beans;
 
 public class ReimburseStatus {
-
 	private int id;
 	private String status;
 	

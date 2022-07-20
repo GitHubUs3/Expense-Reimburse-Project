@@ -19,16 +19,16 @@ public class NewFormServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println(req.getParameter("name"));
-		//resp.sendRedirect("success.html");
-		req.getRequestDispatcher("success.html").forward(req, resp);
+		System.out.println(req.getParameter("please"));
+		resp.sendRedirect("success.html"); // directs client browser to another page
+		//req.getRequestDispatcher("success.html").forward(req, resp);
 		
 	}
 	
 	// Put - update
 	@Override
 	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println(req.getParameter("name"));
+		System.out.println(req.getParameter("please"));
 	}
 	
 	// Delete

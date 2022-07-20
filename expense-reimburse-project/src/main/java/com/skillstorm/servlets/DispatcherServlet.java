@@ -18,7 +18,7 @@ public class DispatcherServlet extends HttpServlet {
 		String baseURL = requestURI.substring(0, requestURI.indexOf("/"));
 
 		switch (baseURL) {
-		case "index": {
+		case "new-form": {
 
 		}
 		}
